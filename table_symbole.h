@@ -15,6 +15,7 @@ typedef Cellule* Liste;
 
 //-- En têtes de fonctions --//
 
+Liste creer_cellule(char* nom,char* type,char* nature);
 void afficher_liste(Liste L); //Affiche les éléments d'une liste
 Liste rechercher(Liste L,char *ch); //Rechercehr un nom dans une liste
 void inserer_element_liste(Liste *liste,Liste Element); //Inserer un élément déja alloué dans une liste
@@ -31,9 +32,12 @@ Liste creer_cellule(char* nom,char* type,char* nature){
 }
 
 void afficher_liste(Liste L){
+    printf ("Début d'une liste \n\n");
     for(Liste P=L;P!=NULL;P=P->svt)
     {
-        printf (" %s : %s-%s ",P->nom,P->nature,P->type);
+        printf ("NOM : %s \n",P->nom);
+        printf ("TYPE : %s \n",P->type);
+        printf ("NATURE : %s\n",P->nature);
     }
 }
 
@@ -80,17 +84,3 @@ Liste creer_liste(){
     return L;
 }
 
-
-
-//Main
-int main () {
-    printf ("Hello, World!\n");
-    Liste L = creer_liste ();
-    printf ("La liste est sur %s \n",L->nom);
-    afficher_liste (L);
-    /*printf ("Donnez une chaine \n");
-    char ch[1500];
-    scanf ("%s",ch);
-    rechercher (L,ch);*/
-    return 0;
-}
