@@ -992,7 +992,7 @@ YY_RULE_SETUP
 case 36:
 YY_RULE_SETUP
 #line 50 "compilateur.l"
-{printf("ESPACE\n");l+=strlen(yytext);}
+{l+=strlen(yytext);}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
