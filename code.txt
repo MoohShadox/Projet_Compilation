@@ -1,15 +1,25 @@
 prg1
 DEC 
-Uint x,y ;
-define Uint x = 6 ;
+UINT x,y ;
+define UINT x = 6 ;
 INST
 x = 3;
 y = 5;
 x = 5 + 7;
-x = x + 6;
 IF ( 3 > 5 )
 x = 3;
-ElSE
+ELSE
 x = 5;
-ENDIF
+ENDIF;
+
+IF ( x*1 > y )
+x = y/3;
+ELSE
+x = 5;
+ENDIF;
+
+FOR ( i=0; (i<10) ; i=i+1)
+x=0;
+ENDFOR;
+
 FIN
