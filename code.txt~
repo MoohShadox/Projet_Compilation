@@ -1,0 +1,15 @@
+prg1
+DEC 
+Uint x,y ;
+define Uint x = 6 ;
+INST
+x = 3;
+y = 5;
+x = 5 + 7;
+x = x + 6;
+IF ( 3 > 5 )
+x = 3;
+ElSE
+x = 5;
+ENDIF
+FIN
