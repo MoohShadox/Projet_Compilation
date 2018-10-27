@@ -14,7 +14,7 @@ idf ([a-z]|([a-z](([a-z0-9]|_)*[a-z0-9])))
 commentaire "<<".+">>"
 erreurtiret ("_"{idf}|{idf}"_"|"_"{idf}"_")
 %%
-")" {l+=strlen(yytext);return PV;} 
+")" {l+=strlen(yytext);return PF;} 
 "(" {l+=strlen(yytext);return PO;}
 "ENDFOR" {l+=strlen(yytext);return ENDFOR;}
 "FOR" {l+=strlen(yytext);return FOR;}

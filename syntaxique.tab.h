@@ -49,7 +49,38 @@ extern int yydebug;
      DEC = 258,
      FIN = 259,
      INST = 260,
-     IDF = 261
+     IDF = 261,
+     VIRG = 262,
+     PV = 263,
+     UFLOATCH = 264,
+     UINTCH = 265,
+     DEFINE = 266,
+     UINT = 267,
+     UFLOAT = 268,
+     MULT = 269,
+     DIV = 270,
+     MOINS = 271,
+     ADD = 272,
+     NOT = 273,
+     OR = 274,
+     AND = 275,
+     SUP = 276,
+     INF = 277,
+     EGALE = 278,
+     SUPE = 279,
+     INFE = 280,
+     DEGALE = 281,
+     DIFF = 282,
+     VRAI = 283,
+     FAUX = 284,
+     IF = 285,
+     THEN = 286,
+     ELSE = 287,
+     ENDIF = 288,
+     FOR = 289,
+     ENDFOR = 290,
+     PO = 291,
+     PF = 292
    };
 #endif
 
@@ -64,7 +95,7 @@ int entier;
 
 
 /* Line 2058 of yacc.c  */
-#line 68 "syntaxique.tab.h"
+#line 99 "syntaxique.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
