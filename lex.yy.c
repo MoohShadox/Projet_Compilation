@@ -527,8 +527,9 @@ char *yytext;
 #include <string.h>
 #include "syntaxique.tab.h"
 int l=0;
-#line 530 "lex.yy.c"
+extern YYSTYPE yylval;
 #line 531 "lex.yy.c"
+#line 532 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -745,9 +746,9 @@ YY_DECL
 		}
 
 	{
-#line 14 "compilateur.l"
+#line 15 "compilateur.l"
 
-#line 750 "lex.yy.c"
+#line 751 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -816,195 +817,195 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 15 "compilateur.l"
+#line 16 "compilateur.l"
 {printf("PF\n");l+=strlen(yytext);return PF;} 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 16 "compilateur.l"
+#line 17 "compilateur.l"
 {printf("PO\n");l+=strlen(yytext);return PO;}
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 17 "compilateur.l"
+#line 18 "compilateur.l"
 {printf("ENDFOR\n");l+=strlen(yytext);return ENDFOR;}
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 18 "compilateur.l"
+#line 19 "compilateur.l"
 {printf("FOR\n");l+=strlen(yytext);return FOR;}
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 19 "compilateur.l"
+#line 20 "compilateur.l"
 {printf("ENDIF\n");l+=strlen(yytext);return ENDIF;}
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 20 "compilateur.l"
+#line 21 "compilateur.l"
 {printf("ELSE\n");l+=strlen(yytext);return ELSE;}
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 21 "compilateur.l"
+#line 22 "compilateur.l"
 {printf("THEN\n");l+=strlen(yytext);return THEN;}
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 22 "compilateur.l"
+#line 23 "compilateur.l"
 {printf("IF\n");l+=strlen(yytext);return IF;}
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 23 "compilateur.l"
+#line 24 "compilateur.l"
 {printf("FAUX\n");l+=strlen(yytext);return FAUX;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 24 "compilateur.l"
+#line 25 "compilateur.l"
 {printf("VRAI\n");l+=strlen(yytext);return VRAI;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 25 "compilateur.l"
+#line 26 "compilateur.l"
 {printf("DIFF\n");l+=strlen(yytext);return DIFF;}
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 26 "compilateur.l"
+#line 27 "compilateur.l"
 {printf("DEGALE\n");l+=strlen(yytext);return DEGALE;}
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 27 "compilateur.l"
+#line 28 "compilateur.l"
 {printf("INFE\n");l+=strlen(yytext);return INFE;}
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 28 "compilateur.l"
+#line 29 "compilateur.l"
 {printf("SUPE\n");l+=strlen(yytext);return SUPE;}
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 29 "compilateur.l"
+#line 30 "compilateur.l"
 {printf("EGALE\n");l+=strlen(yytext);return EGALE;}
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 30 "compilateur.l"
+#line 31 "compilateur.l"
 {printf("INF\n");l+=strlen(yytext);return INF;}
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 31 "compilateur.l"
+#line 32 "compilateur.l"
 {printf("SUP\n");l+=strlen(yytext);return SUP;}
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 32 "compilateur.l"
+#line 33 "compilateur.l"
 {printf("OR\n");l+=strlen(yytext);return OR;}
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 33 "compilateur.l"
+#line 34 "compilateur.l"
 {printf("AND\n");l+=strlen(yytext);return AND;}
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 34 "compilateur.l"
+#line 35 "compilateur.l"
 {printf("NOT\n");l+=strlen(yytext);return NOT;}
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 35 "compilateur.l"
+#line 36 "compilateur.l"
 {printf("ADD\n");l+=strlen(yytext);return ADD;}
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 36 "compilateur.l"
+#line 37 "compilateur.l"
 {printf("MOINS\n");l+=strlen(yytext);return MOINS;}
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 37 "compilateur.l"
+#line 38 "compilateur.l"
 {printf("DIV\n");l+=strlen(yytext);return DIV;}
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 38 "compilateur.l"
+#line 39 "compilateur.l"
 {printf("MULT\n");l+=strlen(yytext);return MULT;}
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 39 "compilateur.l"
+#line 40 "compilateur.l"
 {printf("DEFINE\n");l+=strlen(yytext);return DEFINE;}
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 40 "compilateur.l"
-{printf("UFLOATCH\n");l+=strlen(yytext);return UFLOATCH;}
+#line 41 "compilateur.l"
+{printf("UFLOATCH\n");yylval.chaine=strdup(yytext);l+=strlen(yytext);return UFLOATCH;}
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 41 "compilateur.l"
-{printf("UNINTCH\n");l+=strlen(yytext);return UINTCH;}
+#line 42 "compilateur.l"
+{printf("UNINTCH\n");yylval.chaine=strdup(yytext);l+=strlen(yytext);return UINTCH;}
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 42 "compilateur.l"
+#line 43 "compilateur.l"
 {printf("V\n");l+=strlen(yytext);return VIRG;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 43 "compilateur.l"
+#line 44 "compilateur.l"
 {printf("PV\n");l+=strlen(yytext);return PV;}
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 44 "compilateur.l"
+#line 45 "compilateur.l"
 {printf("DEC\n");l+=strlen(yytext);return DEC;}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 45 "compilateur.l"
+#line 46 "compilateur.l"
 {printf("INST\n");l+=strlen(yytext); return INST;}
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 46 "compilateur.l"
+#line 47 "compilateur.l"
 {printf("Fin\n");l+=strlen(yytext);return FIN;}
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 47 "compilateur.l"
-{printf("Entier\n");l+=strlen(yytext);return UINT;}
+#line 48 "compilateur.l"
+{printf("Entier\n");yylval.entier=atoi(yytext);l+=strlen(yytext);return UINT;}
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 48 "compilateur.l"
+#line 49 "compilateur.l"
 {printf("Float\n");l+=strlen(yytext);return UFLOAT;}
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 49 "compilateur.l"
-{printf("IDF\n");l+=strlen(yytext);return IDF;}
+#line 50 "compilateur.l"
+{printf("IDF\n");yylval.chaine = strdup(yytext);l+=strlen(yytext);return IDF;}
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 50 "compilateur.l"
+#line 51 "compilateur.l"
 {l+=strlen(yytext);}
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 51 "compilateur.l"
+#line 52 "compilateur.l"
 {printf("\nErreur lexical: le mot %s n'est pas reconnu a la ligne %d et la colonne %d \n",yytext,yylineno,l);l=0;}
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 52 "compilateur.l"
+#line 53 "compilateur.l"
 ECHO;
 	YY_BREAK
-#line 1007 "lex.yy.c"
+#line 1008 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2021,7 +2022,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 52 "compilateur.l"
+#line 53 "compilateur.l"
 
 int yywrap(void)
 {

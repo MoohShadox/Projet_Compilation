@@ -1,4 +1,4 @@
-#include <stdio.h>
+﻿#include <stdio.h>
 #include <stdio.h>
 #include <malloc.h>
 #include <mem.h>
@@ -20,8 +20,18 @@ void afficher_liste(Liste L); //Affiche les éléments d'une liste
 Liste rechercher(Liste L,char *ch); //Rechercehr un nom dans une liste
 void inserer_element_liste(Liste *liste,Liste Element); //Inserer un élément déja alloué dans une liste
 Liste creer_liste(); //Créer une liste
-Liste  allouer_cellule(char* nom,char* type,char* nature);
 //-- Définition des fonctions --//
+
+void definir_inconnus(char* type,Liste L){
+Liste P;
+printf("Début avec %s \n",type);
+for(P=L;P!=NULL;P=P->svt)
+{
+if(strcmp(P->type,"INCONNU")==0)
+{strcpy(P->type,type);printf("trouvé \n");}
+}
+printf("Fin de fonction");
+}
 
 Liste creer_cellule(char* nom,char* type,char* nature){
     Liste C = malloc (sizeof (Cellule));

@@ -3,6 +3,7 @@
 #include <string.h>
 #include "syntaxique.tab.h"
 int l=0;
+extern YYSTYPE yylval;
 %}
 %option yylineno
 chiffre [0-9]
@@ -37,16 +38,16 @@ erreurtiret ("_"{idf}|{idf}"_"|"_"{idf}"_")
 "/" {printf("DIV\n");l+=strlen(yytext);return DIV;}
 "*" {printf("MULT\n");l+=strlen(yytext);return MULT;}
 "define" {printf("DEFINE\n");l+=strlen(yytext);return DEFINE;}
-"UFLOAT" {printf("UFLOATCH\n");l+=strlen(yytext);return UFLOATCH;}
-"UINT" {printf("UNINTCH\n");l+=strlen(yytext);return UINTCH;}
+"UFLOAT" {printf("UFLOATCH\n");yylval.chaine=strdup(yytext);l+=strlen(yytext);return UFLOATCH;}
+"UINT" {printf("UNINTCH\n");yylval.chaine=strdup(yytext);l+=strlen(yytext);return UINTCH;}
 "," {printf("V\n");l+=strlen(yytext);return VIRG;}
 ";" {printf("PV\n");l+=strlen(yytext);return PV;}
 "DEC" {printf("DEC\n");l+=strlen(yytext);return DEC;}
 "INST" {printf("INST\n");l+=strlen(yytext); return INST;}
 "FIN" {printf("Fin\n");l+=strlen(yytext);return FIN;}
-{Uint} {printf("Entier\n");l+=strlen(yytext);return UINT;}
+{Uint} {printf("Entier\n");yylval.entier=atoi(yytext);l+=strlen(yytext);return UINT;}
 {Ufloat} {printf("Float\n");l+=strlen(yytext);return UFLOAT;}
-{idf} {printf("IDF\n");l+=strlen(yytext);return IDF;}
+{idf} {printf("IDF\n");yylval.chaine = strdup(yytext);l+=strlen(yytext);return IDF;}
 " " {l+=strlen(yytext);}
 . {printf("\nErreur lexical: le mot %s n'est pas reconnu a la ligne %d et la colonne %d \n",yytext,yylineno,l);l=0;}
 %%
