@@ -1,17 +1,23 @@
 %{
 #include<stdio.h>
+#include "table_symbole.h"
 extern FILE* yyin;
+Liste table_symboles;
 %}
 
 %union
 {char* chaine;
 int entier;
+float flottant;
 }
 
 %token DEC FIN INST IDF VIRG PV UFLOATCH UINTCH DEFINE UINT UFLOAT MULT DIV MOINS ADD NOT OR AND SUP INF EGALE SUPE INFE DEGALE DIFF VRAI FAUX IF THEN ELSE ENDIF FOR ENDFOR PO PF
+%token <entier> UINT
+%token <chaine> IDF
+%token <flottant> UFLOAT
 
 %%
-S :IDF DEC BD INST BI FIN {printf("Programme correcte \n");}
+S :IDF DEC BD INST BI FIN {printf("Programme correcte \n");creer_liste();}
 ;
 BD :DECL PV BD 
 	|DECL PV
@@ -34,7 +40,7 @@ ADDITION :VAL MOINS VAL
 		|VAL
 ;
 VAL :NBR 
-	|MOINS NBR
+	|PO NBR PF
 	|IDF
 ;
 NBR :UINT
@@ -52,6 +58,7 @@ EXPP3 : EXPP3 OR EXPP3
 BOOLVAL : COMPARAISON 
 		| FAUX
 		| VRAI
+		| PO COMPARAISON PF
 ;
 COMPARAISON : EXPR SUP EXPR 
 		| EXPR INF EXPR

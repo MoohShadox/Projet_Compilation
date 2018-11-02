@@ -89,13 +89,14 @@ extern int yydebug;
 typedef union YYSTYPE
 {
 /* Line 2058 of yacc.c  */
-#line 7 "syntaxique.y"
+#line 9 "syntaxique.y"
 char* chaine;
 int entier;
+float flottant;
 
 
 /* Line 2058 of yacc.c  */
-#line 99 "syntaxique.tab.h"
+#line 100 "syntaxique.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

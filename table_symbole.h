@@ -20,7 +20,7 @@ void afficher_liste(Liste L); //Affiche les éléments d'une liste
 Liste rechercher(Liste L,char *ch); //Rechercehr un nom dans une liste
 void inserer_element_liste(Liste *liste,Liste Element); //Inserer un élément déja alloué dans une liste
 Liste creer_liste(); //Créer une liste
-
+Liste  allouer_cellule(char* nom,char* type,char* nature);
 //-- Définition des fonctions --//
 
 Liste creer_cellule(char* nom,char* type,char* nature){

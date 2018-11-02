@@ -1,8 +1,8 @@
 prg1
 DEC 
-<<<<<<< HEAD
 UINT x,y ;
 define UINT x = 6 ;
+define UFLOAT yu = 5.5;
 INST
 x = 3;
 y = 5;
@@ -12,23 +12,13 @@ x = 3;
 ELSE
 x = 5;
 ENDIF;
-
-IF ( x*1 > y )
+IF ( ( x*1 > y ) )
 x = y/3;
 ELSE
-x = 5;
+x = (5);
 ENDIF;
-
 FOR ( i=0; (i<10) ; i=i+1)
 x=0;
 ENDFOR;
+FIN
 
-FIN
-=======
-UINT x,y,a;
-UINT w;
-INST
-x = 4;
-x = 34;
-FIN
->>>>>>> 6f4870372334b0c4b563875c4c3562f7a2d84d76
