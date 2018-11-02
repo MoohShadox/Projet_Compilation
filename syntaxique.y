@@ -19,7 +19,7 @@ float flottant;
 %token <flottant> UFLOAT
 
 %%
-S :IDF DEC BD INST BI FIN {printf("Programme correcte \n");afficher_liste(table_symboles);}
+S :IDF DEC BD INST BI FIN {printf("Programme correcte \n");afficher_liste(table_symboles);  }
 ;
 BD :DECL PV BD 
 	|DECL PV
