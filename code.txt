@@ -2,7 +2,7 @@ prg1
 DEC 
 UINT x,y ;
 define UINT x = 6 ;
-define UFLOAT yu = 5.5;
+define UFLOAT yu = 5.5 ;
 INST
 x = 3;
 y = 5;

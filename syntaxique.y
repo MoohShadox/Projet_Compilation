@@ -1,5 +1,5 @@
 %{
-#include<stdio.h>
+#include <stdio.h>
 #include "table_symbole.h"
 #include<string.h>
 extern FILE* yyin;
@@ -13,9 +13,9 @@ int entier;
 float flottant;
 }
 
-%token DEC FIN INST VIRG PV UFLOATCH UINTCH DEFINE MULT DIV MOINS ADD NOT OR AND SUP INF EGALE SUPE INFE DEGALE DIFF VRAI FAUX IF THEN ELSE ENDIF FOR ENDFOR PO PF
+%token DEC FIN INST VIRG PV DEFINE MULT DIV MOINS ADD NOT OR AND SUP INF EGALE SUPE INFE DEGALE DIFF VRAI FAUX IF THEN ELSE ENDIF FOR ENDFOR PO PF
 %token <entier> UINT
-%token <chaine> IDF,UINTCH,UFLOATCH
+%token <chaine> IDF UINTCH UFLOATCH
 %token <flottant> UFLOAT
 
 %%
@@ -44,7 +44,7 @@ ADDITION :VAL MOINS VAL
 ;
 VAL :NBR 
 	|PO NBR PF
-	|IDF {//Verification requise ici }
+	|IDF
 ;
 NBR :UINT 
 	|UFLOAT
@@ -79,7 +79,7 @@ INSTR : AFFECTATION
 	| BOUCLE
 	| CONDITION
 ;
-AFFECTATION : IDF EGALE PRODUIT {//Verification requise ici }
+AFFECTATION : IDF EGALE PRODUIT
 ;
 CONDITION : IF PO EXPP1 PF BI ELSE BI ENDIF
 ;
