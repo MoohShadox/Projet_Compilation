@@ -89,7 +89,7 @@ extern int yydebug;
 typedef union YYSTYPE
 {
 /* Line 2058 of yacc.c  */
-#line 12 "syntaxique.y"
+#line 17 "syntaxique.y"
 char* chaine;
 int entier;
 float flottant;

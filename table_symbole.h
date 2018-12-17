@@ -1,4 +1,4 @@
-﻿#include <stdio.h>
+#include <stdio.h>
 #include <stdio.h>
 #include <malloc.h>
 #include <mem.h>
@@ -24,13 +24,11 @@ Liste creer_liste(); //Créer une liste
 
 void definir_inconnus(char* type,Liste L){
 Liste P;
-printf("Début avec %s \n",type);
 for(P=L;P!=NULL;P=P->svt)
 {
 if(strcmp(P->type,"INCONNU")==0)
-{strcpy(P->type,type);printf("trouvé \n");}
+{strcpy(P->type,type);}
 }
-printf("Fin de fonction");
 }
 
 Liste creer_cellule(char* nom,char* type,char* nature){
